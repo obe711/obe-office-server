@@ -9,7 +9,6 @@ const changeColor = catchAsync(async (req, res) => {
 });
 
 const changeBrightness = catchAsync(async (req, res) => {
-  console.log(req.body.brightness)
   mesApi.portalApi.portalSetBrightness(req.body.brightness)
   res.status(httpStatus.NO_CONTENT).send();
 });
